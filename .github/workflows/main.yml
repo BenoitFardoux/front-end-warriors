@@ -19,7 +19,16 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: |
+          npm run build || exit 1
+          echo "Build step completed."
+
+      - name: Validate Build Directory
+        run: |
+          if [ ! -d "build" ]; then
+            echo "Error: 'build/' directory not found after build step."
+            exit 1
+          fi
 
       - name: Debug Build Output
         run: |
