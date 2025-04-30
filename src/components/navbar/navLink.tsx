@@ -5,7 +5,9 @@ type props  = {
 }
 const NavbarLink = (props : props) => {
     return (
-        <li className='hover:bg-primary w-full w px-4 py-2 rounded transition duration-150 ease-in-out'>{props.text}</li>
+        <div className="hover:bg-primary w-full rounded transition duration-150 ease-in-out flex justify-center items-center">
+            <li>{props.text}</li>
+        </div>
 
     )
 }

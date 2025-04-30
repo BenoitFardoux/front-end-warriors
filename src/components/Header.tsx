@@ -5,7 +5,7 @@ const Header : React.FC= () => {
   return (
     <header className=' border-b-2 border-primary'>
       <nav className='w-full'>
-        <ul className='flex justify-evenly items-center'>
+        <ul className='flex justify-evenly items-stretch'>
           <img src={logo} className='max-w-md max-h-16 object-contain'></img>
           <NavbarLink text='Accueil' link='/' />
           <NavbarLink text='À propos'  link='/about'/>
