@@ -25,15 +25,15 @@ jobs:
 
       - name: Validate Build Directory
         run: |
-          if [ ! -d "build" ]; then
+          if [ ! -d "dist" ]; then
             echo "Error: 'build/' directory not found after build step."
             exit 1
           fi
 
       - name: Debug Build Output
         run: |
-          ls -la build/
-          du -sh build/
+          ls -la dist/
+          du -sh dist/
 
       - name: Deploy to server via SSH
         uses: appleboy/scp-action@v0.1.6
