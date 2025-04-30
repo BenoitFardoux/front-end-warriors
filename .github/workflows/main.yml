@@ -21,6 +21,11 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug Build Output
+        run: |
+          ls -la build/
+          du -sh build/
+
       - name: Deploy to server via SSH
         uses: appleboy/scp-action@v0.1.6
         with:
