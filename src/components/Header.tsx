@@ -8,7 +8,7 @@ const Header : React.FC= () => {
         <ul className='flex justify-evenly items-stretch'>
           <img src={logo} className='max-w-md max-h-16 object-contain'></img>
           <NavbarLink text='Accueil' link='/' />
-          <NavbarLink text='À propos'  link='/about'/>
+          <NavbarLink text='À pr opos'  link='/about'/>
           <NavbarLink text='Tournois' link='/tournois' />
           <NavbarLink text='Partenaires' link='/partenaires'/>
           <NavbarLink text='Jeux' link='/jeux'/>
