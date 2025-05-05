@@ -10,7 +10,7 @@ const App : React.FC = () =>  {
           {url: 'src/assets/logo_warriors.png', alt: 'Image 1'},
           {url: 'src/assets/logo_warriors.png', alt: 'Image 2'},
           {url: 'src/assets/logo_warriors.png', alt: 'Image 3'}
-        ]} className="h-64 w-full"/>
+        ]} currentIndex={0} className="h-64 w-full"/>
     </div>
     </>
   );
