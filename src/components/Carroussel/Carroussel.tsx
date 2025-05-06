@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import CustomImage from "../CustomImage"
+import Button from "../Button";
 
 interface CarrousselProps {
     images: {url: string, alt : string}[],
@@ -24,7 +25,7 @@ const Carroussel: React.FC<CarrousselProps> = ({ images, imageNumber, className 
 
     return (
         <div className={`flex overflow-x-auto scroll ${className}`}>
-            <button className="cursor-pointer" onClick={() => changeImage(-1)}>Prev</button>
+            <Button className="cursor-pointer" onClick={() => changeImage(-1)} label="previous"></Button>
             
             {images[currentIndex] && (
                 <CustomImage 
@@ -34,7 +35,7 @@ const Carroussel: React.FC<CarrousselProps> = ({ images, imageNumber, className 
                 />
             )}
             
-            <button className="cursor-pointer" onClick={() => changeImage(1)}>Next</button>
+            <Button className="cursor-pointer" onClick={() => changeImage(1)} label="next"></Button>
         </div>
     );
 };
